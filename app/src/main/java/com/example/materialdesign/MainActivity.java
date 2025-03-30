@@ -13,8 +13,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class MainActivity extends AppCompatActivity
-        implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     private TextInputLayout usernameInputLayout;
     private TextInputEditText usernameInput;
@@ -72,28 +71,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        // Set up bottom navigation
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
-        bottomNavigationView.setSelectedItemId(R.id.nav_home); // Set default selection
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
-
-        if (itemId == R.id.nav_home) {
-            Toast.makeText(this, "Home selected", Toast.LENGTH_SHORT).show();
-            // You can add additional home-specific logic here
-            return true;
-        } else if (itemId == R.id.nav_profile) {
-            Toast.makeText(this, "Profile selected", Toast.LENGTH_SHORT).show();
-            // You can add profile-specific logic here
-            return true;
-        } else if (itemId == R.id.nav_settings) {
-            Toast.makeText(this, "Settings selected", Toast.LENGTH_SHORT).show();
-            // You can add settings-specific logic here
-            return true;
-        }
-        return false;
-    }
 }
